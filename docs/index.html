@@ -14,6 +14,7 @@
             <label>そのためにクエストを何周する必要があるかを<br></label>
             <label>計算するツールです。</label>
         </div>
+        <button id="reset" style="margin-top: 6px; margin-bottom: 6px;" onclick="clickReset();">入力内容リセット</button>
         <table border="1" id="main_info">
             <tr>
                 <td id="days_left_label">残り日数</td>
@@ -44,7 +45,7 @@
             </thead>
             <tbody id="lap_count_tbody"></tbody>
         </table>
-        <div style="font-weight:bold;">引き換え一覧</div>
+        <div style="font-weight:bold; padding-top: 10px;">引き換え一覧</div>
         <div class="annotation">
             <label style="color: red">船の日アイテムは対象外としています。<br></label>
             <label style="color: red">交換済のアイテム分は必要数から自動的に引きます。<br></label>

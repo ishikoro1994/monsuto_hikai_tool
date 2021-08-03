@@ -36,6 +36,18 @@ function async(f) {
 }
 
 /**
+ * リセットボタン押下イベント
+ */
+function clickReset() {
+    $('#syozisu').val(null);
+    for (var i = 0; i < itemList.length; i++) {
+        $('#changed_count' + i).val(null);
+    }
+    setHituyosu();
+    setLapCountBody();
+}
+
+/**
  * 所持数変更イベント
  */
 function changeSyozisu() {
