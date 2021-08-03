@@ -76,7 +76,7 @@ function setItemListBody() {
           var rowStr = '';
           rowStr += '<tr>';
           // 引き換え対象
-          rowStr += '<td id="item_name' + i +'">' + data[i].item_name + '</td>';
+          rowStr += '<td id="item_name' + i +'" class="item_name">' + data[i].item_name + '</td>';
           // 交換1回に必要な「秘海石」
           rowStr += '<td id="stone'+ i +'">' + data[i].point + '</td>';
           // 上限
