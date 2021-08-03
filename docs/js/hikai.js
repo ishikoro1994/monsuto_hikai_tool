@@ -87,7 +87,7 @@ function setItemListBody() {
           // 交換済個数
           rowStr += '<td><input type="tel" id="changed_count' + i + '" class="changed_count input_column" maxlength="2"></td>';
           // 交換済
-          rowStr += '<td id="fin_button' + i + '"><button class="fin_button" value="' + i + '">交換済</button></td>';
+          rowStr += '<td id="fin_button' + i + '" style="text-align: center;"><button class="fin_button" value="' + i + '">済</button></td>';
 
           rowStr += '</tr>';
           $('#item_list_tbody').append(rowStr);
