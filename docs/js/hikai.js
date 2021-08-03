@@ -86,8 +86,8 @@ function setItemListBody() {
           hituyosu += Number(data[i].point) * Number(data[i].limit);
           // 交換済個数
           rowStr += '<td><input type="tel" id="changed_count' + i + '" class="changed_count input_column" maxlength="2"></td>';
-          // 取得済
-          rowStr += '<td id="fin_button' + i + '"><button class="fin_button" value="' + i + '">取得済</button></td>';
+          // 交換済
+          rowStr += '<td id="fin_button' + i + '"><button class="fin_button" value="' + i + '">交換済</button></td>';
 
           rowStr += '</tr>';
           $('#item_list_tbody').append(rowStr);
@@ -139,7 +139,13 @@ $(document).on('click', '.fin_button', function() {
 /**
  * 交換済個数変更イベント
  */
- $(document).on('change', '.changed_count', function() {
+$(document).on('change', '.changed_count', function() {
     // 自身のidから行数を取得し、上限と見比べて、多ければ戻す
+    var row = $(this)[0].id.replaceAll('changed_count', '');
+    var limit = $('#limit' + row).text();
+    var changed_count = $(this).val();
+    if (changed_count && (Number(changed_count) > Number(limit))) {
+        $(this).val(limit);
+    }
     setHituyosu();
 });

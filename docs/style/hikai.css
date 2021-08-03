@@ -20,12 +20,6 @@
   text-align: right;
 }
 
-/*使用方法*/
-#how_to {
-  margin-top: initial;
-  color: red;
-}
-
 /*周回数テーブル ヘッダ*/
 #lap_count_table thead {
   background-color: lightskyblue;
@@ -33,10 +27,6 @@
 
 /*ウィンドウ幅が767px以上の場合に適用*/
 @media screen and (min-width: 1025px) {
-  #over_rank_msg {
-    font-size: 14px;
-  }
-
   /*ヘッダタイトル*/
   #head_title {
     font-size: 25px;
@@ -49,6 +39,11 @@
 
   #main_info input {
     font-size: 16px;
+  }
+
+  #explanation,
+  .annotation {
+    font-size: 14px;
   }
 
   /*所持数テキストボックス*/
@@ -68,10 +63,6 @@
 
 @media screen and (max-width: 1024px) {
   /*ウィンドウ幅が最大767pxまでの場合に適用 タブレット*/
-  #over_rank_msg {
-    font-size: 14px;
-  }
-
   /*ヘッダタイトル*/
   #head_title {
     font-size: 25px;
@@ -86,9 +77,19 @@
     font-size: 16px;
   }
 
+  #explanation,
+  .annotation {
+    font-size: 14px;
+  }
+
   /*所持数テキストボックス*/
   #syozisu {
     width: 60px;
+  }
+
+  /*交換済個数*/
+  .changed_count {
+    width: 40px;
   }
 
   #contact {
@@ -103,10 +104,6 @@
     font-size: 18px;
   }
 
-  #over_rank_msg {
-    font-size: 12px;
-  }
-
   /**/
   #main_info td {
     font-size: 12px;
@@ -116,8 +113,23 @@
     font-size: 12px;
   }
 
+  #explanation,
+  .annotation {
+    font-size: 12px;
+  }
+
   #lap_count_table {
     font-size: 13px;
+  }
+
+  /*引き換え対象*/
+  .item_name {
+    width: 64px;
+  }
+
+  /*交換済個数*/
+  .changed_count {
+    width: 40px;
   }
 
   #contact {

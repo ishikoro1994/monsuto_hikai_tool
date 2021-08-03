@@ -9,6 +9,11 @@
     </head>
     <body>
         <h1 id="head_title">モンスト　秘海石ツール</h1>
+        <div id="explanation">
+            <label>アイテム等の交換に必要な秘海石の数と<br></label>
+            <label>そのためにクエストを何周する必要があるかを<br></label>
+            <label>計算するツールです。</label>
+        </div>
         <table border="1" id="main_info">
             <tr>
                 <td id="days_left_label">残り日数</td>
@@ -26,6 +31,9 @@
             </tr>
         </table>
         <p style="font-weight:bold; margin-bottom:unset">周回数</p>
+        <div class="annotation">
+            <label style="color: red">ソロ・ホストでの値です。</label>
+        </div>
         <table border="1" id="lap_count_table">
             <thead style="text-align: center;">
                 <tr>
@@ -36,12 +44,12 @@
             </thead>
             <tbody id="lap_count_tbody"></tbody>
         </table>
-        <p id="how_to">
-            <!-- <label>※目標ランク・目標年月日を設定してください。<br></label>
-            <label>　現在のランクまたは累計経験値を入力してください。(自動計算)<br></label>
-            <label>　(累計経験値は「その他」→「ストライカー」から確認)</label> -->
-        </p>
         <div style="font-weight:bold;">引き換え一覧</div>
+        <div class="annotation">
+            <label style="color: red">船の日アイテムは対象外としています。<br></label>
+            <label style="color: red">交換済のアイテム分は必要数から自動的に引きます。<br></label>
+            <label style="color: red">交換済ボタンを押すと上限まで交換した状態にします。</label>
+        </div>
         <table border="1" id="lap_count_table">
             <thead style="text-align: center;">
                 <tr>
@@ -50,7 +58,7 @@
                     <th>上限</th>
                     <th>上限までに必要な<br>「秘海石」</th>
                     <th>交換済個数</th>
-                    <th>取得済</th>
+                    <th>交換済</th>
                 </tr>
             </thead>
             <tbody id="item_list_tbody"></tbody>
