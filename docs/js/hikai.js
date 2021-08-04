@@ -146,6 +146,7 @@ $(document).on('click', '.fin_button', function() {
     var row = $(this).val();
     $('#changed_count' + row).val(itemList[row].limit);
     setHituyosu();
+    setLapCountBody();
 });
 
 /**
@@ -160,4 +161,5 @@ $(document).on('change', '.changed_count', function() {
         $(this).val(limit);
     }
     setHituyosu();
+    setLapCountBody();
 });
